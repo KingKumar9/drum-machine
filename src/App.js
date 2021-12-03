@@ -22,7 +22,7 @@ class App extends React.Component {
   handleKeyPress(e) {
     let letter = e.key.toUpperCase()
     if (letter === 'Q' || 'W' || 'E' || 'A' || 'S' || 'D' || 'Z' || 'X' || 'C') {
-      $('#' + letter + '-button').trigger('click')
+      $('#' + letter + '-button').trigger('click');
     }
   }
 
@@ -66,10 +66,11 @@ class App extends React.Component {
         <div className="titleContainer">
           <h1 className="title">drum machine</h1>
         </div>
-        <div id="drum-machine">
-          <div id="display">
+        <div id="drum-machine" className="drum-machine">
+          <div id="display" className="display">
             <div className="button-name">
-              { this.state.button }
+              <h3 className="buttonPressedTitle">Button Pressed</h3>
+              <h4 className="buttonPressed">{ this.state.button }</h4>
             </div>
             <div className="loop-name">
               { this.state.loop }
