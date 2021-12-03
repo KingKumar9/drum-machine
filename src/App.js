@@ -78,7 +78,9 @@ class App extends React.Component {
           <div className="buttonContainer">
             <div className="buttonSet">
               {pads.map(i => {
-                return <button onClick={this.play} id={i.letter + '-button'} key={i.letter} className="drum-pad">{i.letter}<audio src={i.source} id={i.letter} className="clip" /></button>
+                return <button onClick={this.play} id={i.letter + '-button'} key={i.letter} className="drum-pad">
+                  {i.letter}<audio src={i.source} id={i.letter} className="clip" />
+                </button>
               })}
             </div>
           </div>
