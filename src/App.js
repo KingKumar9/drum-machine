@@ -21,36 +21,8 @@ class App extends React.Component {
 
   handleKeyPress(e) {
     let letter = e.key.toUpperCase()
-    switch(letter) {
-      case 'Q':
-        $('#' + letter + '-button').trigger('click')
-        break;
-      case 'W':
-        $('#' + letter + '-button').trigger('click')
-        break;
-      case 'E':
-        $('#' + letter + '-button').trigger('click')
-        break;
-      case 'A':
-        $('#' + letter + '-button').trigger('click')
-        break;
-      case 'S':
-        $('#' + letter + '-button').trigger('click')
-        break;
-      case 'D':
-        $('#' + letter + '-button').trigger('click')
-        break;
-      case 'Z':
-        $('#' + letter + '-button').trigger('click')
-        break;
-      case 'X':
-        $('#' + letter + '-button').trigger('click')
-        break;
-      case 'C':
-        $('#' + letter + '-button').trigger('click')
-        break;
-      default:
-        break;
+    if (letter === 'Q' || 'W' || 'E' || 'A' || 'S' || 'D' || 'Z' || 'X' || 'C') {
+      $('#' + letter + '-button').trigger('click')
     }
   }
 
